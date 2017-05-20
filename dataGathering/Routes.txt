@@ -1,0 +1,164 @@
+801, North Lamar/South Congress, Northbound, Weekday, Saturday, Sunday
+801, North Lamar/South Congress, Southbound, Weekday, Saturday, Sunday
+803, Burnet/South Lamar, Northbound, Weekday, Saturday, Sunday
+803, Burnet/South Lamar, Southbound, Weekday, Saturday, Sunday
+7, Duval/Dove Springs, Northbound, Weekday, Saturday, Sunday
+7, Duval/Dove Springs, Southbound, Weekday, Saturday, Sunday
+300, Govalle, Northbound, Saturday, Sunday
+300, Govalle, Southbound, Saturday, Sunday
+325, Ohlen, Eastbound, Weekday, Saturday, Sunday
+325, Ohlen, Westbound, Weekday, Saturday, Sunday
+331, Oltorf, Eastbound, Weekday, Saturday, Sunday
+331, Oltorf, Westbound, Weekday, Saturday, Sunday
+
+1, Metric/South Congress, Northbound, Weekday, Saturday, Sunday
+1, Metric/South Congress, Southbound, Weekday, Saturday, Sunday
+2, Rosewood, Eastbound, Weekday, Saturday, Sunday
+2, Rosewood, Westbound, Weekday, Saturday, Sunday
+3, Burnet/Manchaca, Northbound, Weekday, Saturday, Sunday
+3, Burnet/Manchaca, Southbound, Weekday, Saturday, Sunday
+4, Montopolis, Eastbound, Weekday, Saturday, Sunday
+4, Montopolis, Westbound, Weekday, Saturday, Sunday
+5, Woodrow/South 5th, Northbound, Weekday, Saturday, Sunday
+5, Woodrow/South 5th, Southbound, Weekday, Saturday, Sunday
+6, East 12th, Eastbound, Weekday, Saturday, Sunday
+6, East 12th, Westbound, Weekday, Saturday, Sunday
+10, South 1st/Red River, Northbound, Saturday, Sunday
+10, South 1st/Red River, Southbound, Saturday, Sunday
+17, Cesar Chavez, Eastbound, Weekday, Saturday, Sunday
+17, Cesar Chavez, Westbound, Weekday, Saturday, Sunday
+18, Martin Luther King, Jr/Enfield, Eastbound, Weekday, Saturday, Sunday
+18, Martin Luther King, Jr/Enfield, Westbound, Weekday, Saturday, Sunday
+19, Bull Creek, Northbound, Weekday, Saturday, Sunday
+19, Bull Creek, Southbound, Weekday, Saturday, Sunday
+20, Manor/Riverside, Northbound, Weekday, Saturday, Sunday
+20, Manor/Riverside, Southbound, Weekday, Saturday, Sunday
+21, Exposition, Clockwise, Weekday, Saturday, Sunday
+22, Chicon, Counter-Clockwise, Weekday, Saturday, Sunday
+30, Barton Creek, Northbound, Weekday, Saturday, Sunday
+30, Barton Creek, Southbound, Weekday, Saturday, Sunday
+37, Colony Park/Windsor Park, Northbound, Weekday, Saturday, Sunday
+37, Colony Park/Windsor Park, Northbound, Weekday, Saturday, Sunday
+201, Southpark Meadows, Northbound, Weekday, Saturday, Sunday
+201, Southpark Meadows, Southbound, Weekday, Saturday, Sunday
+214, Northwest Feeder, Eastbound, Weekday
+214, Northwest Feeder, Westbound, Weekday
+228, Burleson, Eastbound, Weekday
+228, Burleson, Westbound, Weekday
+233, Far Northeast Feeder, Eastbound, Weekday, Saturday, Sunday
+233, Far Northeast Feeder, Westbound, Weekday, Saturday, Sunday
+237, Northeast Feeder, Eastbound, Weekday, Saturday, Sunday
+237, Northeast Feeder, Westbound, Weekday, Saturday, Sunday
+238, Westgate, Northbound, Weekday, Saturday, Sunday
+238, Westgate, Southbound, Weekday, Saturday, Sunday
+240, Rutland, Northbound, Weekday, Saturday, Sunday
+240, Rutland, Southbound, Weekday, Saturday, Sunday
+243, Wells Branch, Eastbound, Weekday, Saturday, Sunday
+243, Wells Branch, Westbound, Weekday, Saturday, Sunday
+271, Del Valle Feeder, Eastbound, Weekday
+271, Del Valle Feeder, Westbound, Weekday
+275, North Lamar, Northbound, Weekday, Saturday, Sunday
+275, North Lamar, Southbound, Weekday, Saturday, Sunday
+311, Stassney, Eastbound, Weekday, Saturday, Sunday
+311, Stassney, Westbound, Weekday, Saturday, Sunday
+320, St Johns, Northbound, Weekday, Saturday, Sunday
+320, St Johns, Southbound, Weekday, Saturday, Sunday
+323, Anderson, Eastbound, Weekday, Saturday, Sunday
+323, Anderson, Westbound, Weekday, Saturday, Sunday
+333, William Cannon, Eastbound, Weekday, Saturday, Sunday
+333, William Cannon, Westbound, Weekday, Saturday, Sunday
+338, Lamar/45th, Northbound, Weekday, Saturday, Sunday
+338, Lamar/45th, Southbound, Weekday, Saturday, Sunday
+350, Airport Blvd, Northbound, Weekday, Saturday, Sunday
+350, Airport Blvd, Southbound, Weekday, Saturday, Sunday
+383, Research, Northbound, Weekday, Saturday, Sunday
+383, Research, Southbound, Weekday, Saturday, Sunday
+392, Braker, Eastbound, Weekday, Saturday, Sunday
+392, Braker, Westbound, Weekday, Saturday, Sunday
+
+103, Manchaca Flyer, Northbound, Weekday
+103, Manchaca Flyer, Southbound, Weekday
+110, South Central Flyer, Northbound, Weekday
+110, South Central Flyer, Southbound, Weekday
+111, South MoPac Flyer, Northbound, Weekday
+111, South MoPac Flyer, Southbound, Weekday
+122, Four Points Limited, Northbound, Weekday
+122, Four Points Limited, Southbound, Weekday
+127, Dove Springs Flyer, Northbound, Weekday
+127, Dove Springs Flyer, Southbound, Weekday
+135, Dell Limited 1030, Northbound, Weekday
+135, Dell Limited 1030, Southbound, Weekday
+142, Metric Flyer 30, Northbound, Weekday
+142, Metric Flyer 30, Southbound, Weekday
+171, Oak Hill Flyer 2030, Northbound, Weekday
+171, Oak Hill Flyer 2030, Southbound, Weekday
+935, Tech Ridge Express 1030, Northbound, Weekday
+935, Tech Ridge Express 1030, Southbound, Weekday
+970, Lantana Express, Northbound, Weekday
+970, Lantana Express, Southbound, Weekday
+982, Pavilion Express, Northbound, Weekday
+982, Pavilion Express, Southbound, Weekday
+983, N US183 Express, Northbound, Weekday
+983, N US183 Express, Southbound, Weekday
+985, Leander/Lakeline Direct, Northbound, Weekday
+985, Leander/Lakeline Direct, Southbound, Weekday
+987, Leander/Northwest Express, Northbound, Weekday
+987, Leander/Northwest Express, Southbound, Weekday
+990, Manor/Elgin Express, Eastbound, Weekday
+990, Manor/Elgin Express, Westbound, Weekday
+
+100, MetroAirport Flyer, Inbound, Weekday, Saturday, Sunday
+100, MetroAirport Flyer, Outbound, Weekday, Saturday, Sunday
+410, EBus/West Campus, No route found
+411, EBus/Riverside, No route found
+412, EBus/Main Campus, No route found
+464, MLK, Jr/Capitol 35, Eastbound, Weekday
+464, MLK, Jr/Capitol 35, Westbound, Weekday
+465, MLK, Jr/University of Texas, Eastbound, Weekday
+465, MLK, Jr/University of Texas, Westbound, Weekday
+466, Kramer, Counter-Clockwise, Weekday
+470, Manor Flex, Eastbound, Weekday, Saturday
+470, Manor Flex, Westbound, Weekday, Saturday
+481, Night Owl/North Lamar, Northbound, Weekday, Saturday
+481, Night Owl/North Lamar, Southbound, Weekday, Saturday
+483, Night Owl/Riverside, Northbound, Weekday, Saturday
+483, Night Owl/Riverside, Southbound, Weekday, Saturday
+484, Night Owl/South Lamar, Northbound, Weekday, Saturday
+484, Night Owl/South Lamar, Southbound, Weekday, Saturday
+485, Night Owl/Cameron, Northbound, Weekday, Saturday
+485, Night Owl/Cameron, Southbound, Weekday, Saturday
+486, Night Owl/South Congress, Northbound, Weekday, Saturday
+486, Night Owl/South Congress, Southbound, Weekday, Saturday
+490, HEB Shuttle, Inbound, Monday, Wednesday, Thursday, Friday
+490, HEB Shuttle, Outbound, Monday, Wednesday, Thursday, Friday
+491, Allandale Shuttle, Northbound, Tuesday, Thursday, Saturday
+491, Allandale Shuttle, Southbound, Tuesday, Thursday, Saturday
+492, Delwood, Northbound, Monday, Wednesday, Friday
+492, Delwood, Southbound, Monday, Wednesday, Friday
+
+640, Forty Acres, Clockwise, Weekday
+641, East Campus, Eastbound, Weekday
+641, East Campus, Westbound, Weekday
+642, West Campus, Counter-Clockwise, Weekday, Sunday
+653, Red River 7, Inbound, Weekday, Sunday
+653, Red River 7, Outbound, Weekday, Sunday
+656, Intramural Fields, Inbound, Weekday, Saturday
+656, Intramural Fields, Outbound, Weekday, Saturday
+661, Far West, Inbound, Weekday
+661, Far West, Outbound, Weekday
+663, Lake Austin, Inbound, Weekday, Sunday
+663, Lake Austin, Outbound, Weekday, Sunday
+670, Crossing Place, Inbound, Weekday, Sunday
+670, Crossing Place, Outbound, Weekday, Sunday
+671, North Riverside, Inbound, Weekday
+671, North Riverside, Outbound, Weekday
+680, use Route 680
+672, Lakeshore, Inbound, Weekday
+672, Lakeshore, Outbound, Weekday
+680, use Route 680
+680, Lakeshore/North Riverside, Inbound, Weekday, Saturday, Sunday
+680, Lakeshore/North Riverside, Outbound, Weekday, Saturday, Sunday
+681, Intramural Fields/Far West, No route found
+682, Forty Acres/East Campus, No route found
+
+550, Metro Rail Line, Northbound, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
