@@ -1,26 +1,40 @@
-<!DOCTYPE html>
-<html ng-app="myApp">
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
-  <!-- bring in angular moment here and add injection in javascripts/app.js-->
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-  <script src="moment/moment.js"></script>
-  <script src="angular-moment/angular-moment.js"></script>
-
-
-
-  <script src="https://unpkg.com/angular-ui-router@1.0.0-rc.1/release/angular-ui-router.js" charset="utf-8"></script>
-  <script src="javascripts/app.js" charset="utf-8"></script>
-  <script src="javascripts/components/pageTwo.js" charset="utf-8"></script>
-  <script src="javascripts/components/pageOne.js" charset="utf-8"></script>
-  <title>Angular Reddit Clone 2</title>
+  <link rel="stylesheet" href="styles.css" charset="utf-8">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+  <script src="example.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<header class="pageHeader">
+  <h4>Find a Ride! (Header)</h4>
+</header>
 <body>
-  <h1>Home Page</h1>
-  <ui-view></ui-view>
+  <script type="text/ng-template" id="customPopupTemplate.html">
+    <div class="custom-popup-wrapper" ng-style="{top: position().top+'px', left: position().left+'px'}" style="display: block;" ng-show="isOpen() && !moveInProgress" aria-hidden="{{!isOpen()}}">
+      <p class="message">select location from drop down.</p>
+      <ul class="dropdown-menu" role="listbox">
+        <li class="uib-typeahead-match" ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
+          <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+        </li>
+      </ul>
+    </div>
+  </script>
+  <div class="searchBox">
+    <div class='container-fluid typeahead-demo' ng-controller="TypeaheadCtrl">
+      <h5>Pickup Area (by keyword or address)</h4>
+      <!-- <pre>Model: {{selected | json}}</pre> -->
+      <input type="text" ng-model="fromLocation" uib-typeahead="keyword for keyword in keywords | filter:$viewValue | limitTo:8" class="form-control">
+    </div>
+    <div class='container-fluid typeahead-demo' ng-controller="TypeaheadCtrl">
+      <h5>Dropoff Area (by keyword or address)</h4>
+      <!-- <pre>Model: {{selected | json}}</pre> -->
+      <input type="text" ng-model="toLocation" uib-typeahead="keyword for keyword in keywords | filter:$viewValue | limitTo:8" class="form-control">
+    </div>
+  </div>
 </body>
 </html>
