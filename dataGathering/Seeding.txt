@@ -1,0 +1,14 @@
+
+Seeding is done using the copy command in postgres:
+
+\copy routes FROM '~/g45/Q3Project/dataGathering/google_transit/routes.txt' DELIMITER ',' CSV
+ \copy agency FROM '~/g45/Q3Project/dataGathering/google_transit/agency.txt' DELIMITER ',' CSV
+ \copy calendar_dates FROM '~/g45/Q3Project/dataGathering/google_transit/calendar_dates.txt' DELIMITER ',' CSV
+ \copy calendar FROM '~/g45/Q3Project/dataGathering/google_transit/calendar.txt' DELIMITER ',' CSV
+ \copy fare_attributes FROM '~/g45/Q3Project/dataGathering/google_transit/fare_attributes.txt' DELIMITER ',' CSV
+ \copy fare_rules FROM '~/g45/Q3Project/dataGathering/google_transit/fare_rules.txt' DELIMITER ',' CSV
+ \copy feed_info FROM '~/g45/Q3Project/dataGathering/google_transit/feed_info.txt' DELIMITER ',' CSV
+ \copy shapes FROM '~/g45/Q3Project/dataGathering/google_transit/shapes.txt' DELIMITER ',' CSV
+ \copy stop_times FROM '~/g45/Q3Project/dataGathering/google_transit/stop_times.txt' DELIMITER ',' CSV
+ \copy stops FROM '~/g45/Q3Project/dataGathering/google_transit/stops.txt' DELIMITER ',' CSV
+ \copy trips FROM '~/g45/Q3Project/dataGathering/google_transit/trips.txt' DELIMITER ',' CSV

@@ -9,6 +9,7 @@
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
   <script src="example.js"></script>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkglGA_QCRbWdTB8WbheqnjLhGJ4D74Lg&libraries=places"></script>
 </head>
 <header class="pageHeader">
   <h4>Find a Ride! (Header)</h4>
@@ -36,5 +37,9 @@
       <input type="text" ng-model="toLocation" uib-typeahead="keyword for keyword in keywords | filter:$viewValue | limitTo:8" class="form-control">
     </div>
   </div>
+
+
+
+
 </body>
 </html>
