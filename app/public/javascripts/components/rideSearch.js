@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('myApp')
-    .component('pageOne', {
+    .component('rideSearch', {
       controller: controller,
       template: `
 

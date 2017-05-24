@@ -1,0 +1,50 @@
+capMetroDB=# \d routes
+                 Table "public.routes"
+      Column      |          Type          | Modifiers 
+------------------+------------------------+-----------
+ route_id         | character varying(255) | 
+ agency_id        | character varying(255) | 
+ route_short_name | character varying(255) | 
+ route_long_name  | character varying(255) | 
+ route_desc       | character varying(255) | 
+ route_type       | character varying(255) | 
+ route_url        | character varying(255) | 
+ route_color      | character varying(255) | 
+ route_text_color | character varying(255) | 
+
+capMetroDB=# \d stops
+                   Table "public.stops"
+       Column        |          Type          | Modifiers 
+---------------------+------------------------+-----------
+ stop_id             | character varying(255) | 
+ stop_code           | character varying(255) | 
+ stop_name           | character varying(255) | 
+ stop_desc           | character varying(255) | 
+ stop_lat            | character varying(255) | 
+ stop_lon            | character varying(255) | 
+ zone_id             | character varying(255) | 
+ stop_url            | character varying(255) | 
+ location_type       | character varying(255) | 
+ parent_station      | character varying(255) | 
+ stop_timezone       | character varying(255) | 
+ wheelchair_boarding | character varying(255) | 
+ corner_placement    | character varying(255) | 
+ stop_position       | character varying(255) | 
+ on_street           | character varying(255) | 
+ at_street           | character varying(255) | 
+ heading             | character varying(255) | 
+
+capMetroDB=# \d trips
+                    Table "public.trips"
+        Column         |          Type          | Modifiers 
+-----------------------+------------------------+-----------
+ route_id              | character varying(255) | 
+ service_id            | character varying(255) | 
+ trip_id               | character varying(255) | 
+ trip_headsign         | character varying(255) | 
+ trip_short_name       | character varying(255) | 
+ direction_id          | character varying(255) | 
+ block_id              | character varying(255) | 
+ shape_id              | character varying(255) | 
+ wheelchair_accessible | character varying(255) | 
+ bikes_allowed         | character varying(255) | 
