@@ -9,17 +9,17 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 app.use(bodyParser.json())
-// app.use(express.static(path.join(__dirname, 'public')))
-// app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 app.use('/api/stops', require('./routes/stops'))
 // app.use('/api/posts', require('./routes/comments'))
 
 app.use('*', function(req, res, next) {
   //console.log("Listening on port " + port);
-  // res.sendFile('index.html', {
-  //   root: path.join(__dirname, 'public')
-  // })
+  res.sendFile('index.html', {
+    root: path.join(__dirname, 'public')
+  })
 })
 
 app.use(function(req, res, next) {

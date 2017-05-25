@@ -1,22 +1,21 @@
 (function() {
-  angular.module('myApp', ['ui.router', 'angularMoment'])
+  angular.module('myApp', ['ui.router'])
     .config(config)
 
   config.$inject = ["$stateProvider", "$urlServiceProvider"]
 
   function config($stateProvider, $urlServiceProvider) {
-    // make your app start at state 'page-one'
-    $urlServiceProvider.rules.otherwise({
-      state: 'page-one'
-    });
+    // make your app start at state 'ride-search'
+    $urlServiceProvider.rules.otherwise('/');
     $stateProvider
-      .state('page-one', {
+      .state('ride-search', {
         url: '/',
-        component: 'pageOne'
-      })
-      .state('page-banana', {
-        url: '/page-two/:id',
-        component: 'pageTwo',
+        template: `
+
+          <h1>ride-search state<h1>
+
+        `
+        //component: 'rideSearch'
       })
   }
 

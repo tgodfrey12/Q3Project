@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../db')
 
+//Call http GET http://localhost:7000/api/stops
+//to get all the stops in the capMetroDB database
 router.get('/', (req, res, next) => {
   console.log("In the stops get root route");
 

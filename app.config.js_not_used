@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('app').config(config)
+  angular.module('myApp').config(config)
 
   config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
 
@@ -15,7 +15,7 @@
       .state({
         name: 'home',
         url: '/',
-        component: 'app',
+        component: 'rideSearch',
       })
   }
 

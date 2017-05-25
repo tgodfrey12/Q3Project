@@ -6,15 +6,10 @@
       controller: controller,
       template: `
 
-      <p>
-        Here is the template
-      </p>
 
-        <div class="buttons">
-          <button type="submit" class="btn btn-primary" ng-click="$ctrl.createPost($ctrl.post)">
-              Create Post
-            </button>
-        </div>
+        Here is the template
+
+
   `
     })
 
@@ -23,6 +18,17 @@
   controller.$inject = ['$http']
 
   function controller($http) {
+    console.log('this is the controller for the rideSearch component');
+
+    vm.$onInit = function() {
+      //Get all the posts
+      $http.get('/api/stops/').then(function(response) {
+        vm.posts = response.data;
+        vm.showComments = false;
+        console.log(vm.posts);
+      })
+    }
+
 
   } //end controller
 
