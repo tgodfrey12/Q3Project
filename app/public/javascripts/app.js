@@ -10,12 +10,7 @@
     $stateProvider
       .state('ride-search', {
         url: '/',
-        template: `
-
-          <h1>ride-search state<h1>
-
-        `
-        //component: 'rideSearch'
+        component: 'rideSearch'
       })
   }
 

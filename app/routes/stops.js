@@ -8,7 +8,8 @@ router.get('/', (req, res, next) => {
   console.log("In the stops get root route");
 
   knex('stops')
-    .orderBy('stop_id')
+    //.whereIn('stop_id', [1002, 1003, 1005, 1006, 1008])
+    .where('stop_lat', 'like', '30.26%').andWhere('stop_lon', 'like', '-97.74%')
     .then((stops) => {
       res.send(stops);
     })

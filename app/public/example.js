@@ -35,31 +35,3 @@ angular.module('ui.bootstrap.demo').controller('TypeaheadCtrl', function($scope,
     getterSetter: true
   };
 });
-
-//Initialize the map using the lat/long of the map and the type of map
-//Then create and draw the map
-function initMap(mapType, lattitude, longitude) {
-
-  $('#places').empty();
-
-  var mapCenter = {
-    lat: lattitude,
-    lng: longitude
-  };
-
-  if (mapType === "brewery") {
-    $('#breweryButton').addClass('active');
-  }
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: mapCenter,
-    zoom: 17
-  });
-
-  var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch({
-    location: mapCenter,
-    radius: 50000,
-    keyword: mapType
-  }, processResults);
-}
