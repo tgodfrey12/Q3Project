@@ -124,14 +124,23 @@
 
 
 
+
+
+        <div id="map"></div>
+
+
+
+
+
+
   `
     })
 
 
 
-  controller.$inject = ['$http']
+  controller.$inject = ['$http', 'notify']
 
-  function controller($http) {
+  function controller($http, notify) {
     console.log('this is the controller for the rideSearch component');
     const vm = this;
 
@@ -142,9 +151,15 @@
       $http.get('/api/stops/').then(function(response) {
         vm.stops = response.data;
         vm.showComments = false;
-        console.log(vm.stops);
+        //console.log(vm.stops);
       })
     }
+
+    //Call methods from within the notify service in mapModule.js
+    notify.onInit();
+
+    //
+
 
 
   } //end controller
