@@ -5,68 +5,30 @@
   float: left;
 }
 
-.pageHeader{
-  background-color: brown;
-}
-
-.typeahead-demo .custom-popup-wrapper {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  background-color: #f9f9f9;
-}
-
-.typeahead-demo .custom-popup-wrapper>.message {
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  color: #868686;
-  width: 25%;
-}
-
-.typeahead-demo .custom-popup-wrapper>.dropdown-menu {
-
-  position: static;
-  float: none;
-  display: block;
-  min-width: 160px;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.SearchResults{
-
-   display: flex;
-  background-color: blue;
-  width: 50%;
-  flex-direction: column;
-  float: right;
-  overflow-y: auto;
-  height: 400px;
-}
 
 .header{
   height: 100px;
   background-color: yellow;
 }
-
-.searchArea{
-  width: 37%;
-  height: 100px;
+.fromSearchOptions{
+  width: 50%;
   background-color: red;
 }
 
-.footer{
+/*.searchArea{
+  width: 37%;
+  height: 100px;
+  background-color: red;
+}*/
+
+/*.footer{
   background-color: pink;
   height: 100px;
-}
+}*/
 
-#map{
-  height: 400px;
-  width: 50%;
-  float: left;
-
+.map{
+  display: flex;
+  height: 200px;
+  width: 100%;
+  float: right;
 }

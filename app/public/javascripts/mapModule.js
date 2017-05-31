@@ -82,6 +82,8 @@
             break;
         }
 
+        initMap(lat, long);
+
       }
 
 

@@ -30,46 +30,5 @@
   Here is the app!
   <ui-view></ui-view>
 
-
-
- <div id="map"></div>
-        <!--<script>
-      if ("geolocation" in navigator) {
-        console.log('geolocation available');
-        navigator.geolocation.getCurrentPosition(function(position) {
-          initMap(position.coords.latitude, position.coords.longitude);
-        });
-      } else {
-        /* geolocation IS NOT available */
-        alert('geolocation not available');
-      }
-
-
-        function initMap(latitude, longitude) {
-          var labels = ['You Are Here'];
-
-
-          var startLocation = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
-
-          console.log('startLocation = ' + JSON.stringify(startLocation));
-
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
-            center: startLocation
-          });
-          var marker = new google.maps.Marker({
-            position: startLocation,
-            label: labels[0],
-            map: map,
-
-          });
-        }
-      </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkglGA_QCRbWdTB8WbheqnjLhGJ4D74Lg&callback=initMap"></script> -->
-
-  <footer class="footer">
-    The footer is in pink
-  </footer>
-
   </body>
 </html>

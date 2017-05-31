@@ -8,29 +8,15 @@
 
 
         Here is the template
-        <div class="SearchResults">
-          <ul ng-repeat="stop in $ctrl.stops">
 
-            <div class="row">
-                <div class="col-md-12">
-                  <p>
-                    {{stop.stop_id}}
-                  </p>
-                  <p>
-                    {{stop.stop_name}}
-                  </p>
-                  <p>
-                    {{stop.stop_lat}}
-                  </p>
-                  <p>
-                    {{stop.stop_lon}}
-                  </p>
-                </div>
-            </div>
-          </ul>
-        </div>
 
-          <h4>Where are you coming from?</h4>
+        <!--A map div-->
+        <H3>Your Current Location</H3>
+        <div class="map" id="map"></div>
+
+
+        <!--div class="toSearchOptions">
+
           <div class="radioButtons">
             <div class="alert alert-info">
                 <div class="form">
@@ -47,24 +33,22 @@
                 </div>
             </div>
         </div>
-      </div>
+      </div-->
 
-
+        <h4>Where are you going to?</h4>
         <div class="searchArea">
           <div class="row">
             <div class="col-lg-6">
-              <div class="input-group"  ng-show="address">
+              <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for address">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button">Go!</button>
                 </span>
               </div><!-- /input-group -->
 
-
-
-              <div class="btn-group" ng-show="landmark"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Select an Austin Landmark <span class="caret"></span></a>
+              <div class="btn-group" ng-show="toLandmark"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select an Austin Landmark <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="#">East Downtown</a></li>
+                      <li ng-model="EDowntown"><a href="#">East Downtown</a></li>
                       <li><a href="#">West Downtown</a></li>
                       <li><a href="#">Westgate</a></li>
                       <li><a href="#">The Domain</a></li>
@@ -73,9 +57,6 @@
                       <li><a href="#">Hutto</a></li>
                   </ul>
               </div>
-
-
-
 
                 <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Departure Time<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -119,8 +100,7 @@
                 </div>
 
               </div>
-
-
+            </div> <!--End From Search Options div-->
             </div><!-- /.col-lg-6 -->
           </div><!-- /.row -->
         </div>
@@ -128,12 +108,27 @@
 
 
 
+        <div class="SearchResults">
+          <ul ng-repeat="stop in $ctrl.stops">
 
-        <!--A map div-->
-        <div id="map"></div>
-
-
-
+            <div class="row">
+                <div class="col-md-12">
+                  <p>
+                    {{stop.stop_id}}
+                  </p>
+                  <p>
+                    {{stop.stop_name}}
+                  </p>
+                  <p>
+                    {{stop.stop_lat}}
+                  </p>
+                  <p>
+                    {{stop.stop_lon}}
+                  </p>
+                </div>
+            </div>
+          </ul>
+        </div>
 
 
 
