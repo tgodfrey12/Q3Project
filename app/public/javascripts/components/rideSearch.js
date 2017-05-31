@@ -11,9 +11,8 @@
 
 
         <!--A map div-->
-        <H3>Your Current Location</H3>
+        <H3>Where are you leaving from?</H3>
         <div class="map" id="map"></div>
-
 
         <!--div class="toSearchOptions">
 
@@ -35,28 +34,44 @@
         </div>
       </div-->
 
-        <h4>Where are you going to?</h4>
+
+
+
+
         <div class="searchArea">
           <div class="row">
             <div class="col-lg-6">
-              <div class="input-group">
+              <!--div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for address">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button">Go!</button>
                 </span>
-              </div><!-- /input-group -->
+              </div-->
 
-              <div class="btn-group" ng-show="toLandmark"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select an Austin Landmark <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                      <li ng-model="EDowntown"><a href="#">East Downtown</a></li>
-                      <li><a href="#">West Downtown</a></li>
-                      <li><a href="#">Westgate</a></li>
-                      <li><a href="#">The Domain</a></li>
-                      <li><a href="#">South Congress</a></li>
-                      <li><a href="#">Round Rock</a></li>
-                      <li><a href="#">Hutto</a></li>
-                  </ul>
-              </div>
+
+
+
+
+              <li class="dropdown" ng-init="$ctrl.area='West Downtown'; sortName='Votes'">
+                 <a href="#"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false">Select a landmark to depart from<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a ng-click="$ctrl.area='West Downtown'; $ctrl.departlandmarkSelect();">West Downtown</a></li>
+                   <li><a ng-click="$ctrl.area='Westgate'; $ctrl.departlandmarkSelect();">Westgate</a></li>
+                   <li><a ng-click="$ctrl.area='The Domain'; $ctrl.departlandmarkSelect();">The Domain</a></li>
+                   <li><a ng-click="$ctrl.area='South Congress'; $ctrl.departlandmarkSelect();">South Congress</a></li>
+                   <li><a ng-click="$ctrl.area='Round Rock'; $ctrl.departlandmarkSelect();">Round Rock</a></li>
+                   <li><a ng-click="$ctrl.area='Hutto'; $ctrl.departlandmarkSelect();">Hutto</a></li>
+                 </ul>
+               </li>
+
+
+
+
 
                 <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Departure Time<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -143,8 +158,11 @@
     console.log('this is the controller for the rideSearch component');
     const vm = this;
 
+    console.log("vm.area = " + vm.area);
+
     vm.$onInit = function() {
       console.log("api stops loading...");
+
 
       //Get all the posts
       $http.get('/api/stops/').then(function(response) {
@@ -154,10 +172,14 @@
       })
     }
 
+    vm.departlandmarkSelect = function() {
+      console.log(vm.area);
+
+      notify.loadkeyWordMap(vm.area);
+    }
+
     //Call methods from within the notify service in mapModule.js
     notify.onInit();
-
-    //
 
 
 

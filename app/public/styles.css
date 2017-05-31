@@ -15,6 +15,11 @@
   background-color: red;
 }
 
+.fromDropDown{
+  background-color: blue;
+  height: 500px;
+}
+
 /*.searchArea{
   width: 37%;
   height: 100px;
@@ -28,7 +33,7 @@
 
 .map{
   display: flex;
-  height: 200px;
+  height: 250px;
   width: 100%;
   float: right;
 }
