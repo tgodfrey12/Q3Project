@@ -49,16 +49,6 @@
         </div>
       </div>
 
-      <div class="btn-group" ng-show="landmark"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Select an Austin Landmark <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-              <li><a href="#">East Downtown</a></li>
-              <li><a href="#">West Downtown</a></li>
-              <li><a href="#">Westgate</a></li>
-              <li><a href="#">The Domain</a></li>
-              <li><a href="#">South Congress</a></li>
-              <li><a href="#">Round Rock</a></li>
-          </ul>
-      </div>
 
         <div class="searchArea">
           <div class="row">
@@ -72,7 +62,21 @@
 
 
 
-              <div class="row">
+              <div class="btn-group" ng-show="landmark"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Select an Austin Landmark <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">East Downtown</a></li>
+                      <li><a href="#">West Downtown</a></li>
+                      <li><a href="#">Westgate</a></li>
+                      <li><a href="#">The Domain</a></li>
+                      <li><a href="#">South Congress</a></li>
+                      <li><a href="#">Round Rock</a></li>
+                      <li><a href="#">Hutto</a></li>
+                  </ul>
+              </div>
+
+
+
+
                 <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Departure Time<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">12:00</a></li>
@@ -88,7 +92,7 @@
                         <li><a href="#">10:00</a></li>
                         <li><a href="#">11:00</a></li>
                     </ul>
-                </div>
+
 
                 <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Arrival Time<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -125,7 +129,7 @@
 
 
 
-
+        <!--A map div-->
         <div id="map"></div>
 
 

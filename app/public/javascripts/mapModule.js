@@ -42,13 +42,55 @@
         });
       } //End initMap
 
+      //Can add more methods as well
+      // this.anotherMethod = function(){}
+      this.loadkeyWordMap = function(keyword) {
+
+        var lat;
+        var long;
+
+        switch (keyword) {
+          case 'East Downtown':
+            //Statements executed when the result of expression matches value1
+            lat = '30.2718634';
+            long = '-97.7564902';
+
+            break;
+          case 'West Downtown':
+            //Statements executed when the result of expression matches value2
+            lat = '30.2718634';
+            long = '-97.7564902';
+
+            break;
+          case 'Westgate':
+            lat = '30.2249088';
+            long = '-97.8065877';
+
+            break;
+          case 'The Domain':
+            lat = '30.4020649';
+            long = '-97.7280716';
+            break;
+          case 'Hutto':
+            lat = '30.5391729';
+            long = '-97.584807';
+
+            break;
+          default:
+            lat = '30.2746652';
+            long = '-97.7425392';
+            break;
+        }
+
+      }
+
+
 
     };
 
-    //Can add more methods as well
-    // this.anotherMethod = function(){}
 
   }
+
 
 
 }())
