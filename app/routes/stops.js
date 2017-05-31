@@ -17,8 +17,21 @@ router.get('/', (req, res, next) => {
     });
 })
 
-router.get('/:lat/:long', (req, res, next) => {
-  console.log("In the stops get lat longroute");
+router.get('/search', (req, res, next) => {
+  //req.query gets the params
+  console.log("query = " + req.query.lat);
+  console.log("query = " + req.query.long);
+
+
+
+
+
+
+
+  res.send("reponse")
+
+
+
   // knex('stops')
   //   .where('stop_lat', 'like', '30.26%').andWhere('stop_lon', 'like', '-97.74%')
   //   .limit(10)

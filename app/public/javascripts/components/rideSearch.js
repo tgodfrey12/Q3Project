@@ -150,21 +150,19 @@
   `
     })
 
-
-
   controller.$inject = ['$http', 'notify']
 
   function controller($http, notify) {
-    console.log('this is the controller for the rideSearch component');
+    //console.log('this is the controller for the rideSearch component');
     const vm = this;
 
-    console.log("vm.area = " + vm.area);
+
 
     vm.$onInit = function() {
-      console.log("api stops loading...");
+      //console.log("api stops loading...");
 
 
-      //Get all the posts
+      //Get all the stops
       $http.get('/api/stops/').then(function(response) {
         vm.stops = response.data;
         vm.showComments = false;
@@ -172,16 +170,73 @@
       })
     }
 
-    vm.departlandmarkSelect = function() {
-      console.log(vm.area);
 
-      notify.loadkeyWordMap(vm.area);
+
+
+
+    vm.departlandmarkSelect = function() {
+      console.log("vm.area = " + vm.area);
+      let lat = '';
+      let long = '';
+
+
+      switch (vm.area) {
+        case 'West Downtown':
+          //Statements executed when the result of expression matches value2
+          lat = '30.2718634';
+          long = '-97.7564902';
+          break;
+        case 'Westgate':
+          lat = '30.2249088';
+          long = '-97.8065877';
+
+          break;
+        case 'The Domain':
+          lat = '30.4020649';
+          long = '-97.7280716';
+          break;
+        case 'Hutto':
+          lat = '30.5391729';
+          long = '-97.584807';
+
+          break;
+        case 'South Congress':
+          lat = '30.249222';
+          long = '-97.7517067';
+          break;
+        default:
+          lat = '30.2746652';
+          long = '-97.7425392';
+          break;
+      }
+
+
+      //console.log('about to call lat and long route');
+      //get the lat/longs for the nearby markers
+      //using a new route
+      $http.get('/api/stops/${lat}/${long}').then(function(response) {
+        console.log('calling lat and long route');
+        // vm.stops = response.data;
+        // vm.showComments = false;
+        //console.log(vm.stops);
+      })
+
+
+
+      notify.loadkeyWordMap(vm.area, lat, long);
+
+      //console.log("lat = " + notify.lat);
+
     }
+
+
+
+
+
+
 
     //Call methods from within the notify service in mapModule.js
     notify.onInit();
-
-
 
   } //end controller
 
