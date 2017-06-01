@@ -6,10 +6,6 @@
       controller: controller,
       template: `
 
-
-        Here is the template
-
-
         <!--A map div-->
         <H3>Where are you leaving from?</H3>
         <div class="map" id="map"></div>
@@ -33,10 +29,6 @@
             </div>
         </div>
       </div-->
-
-
-
-
 
         <div class="searchArea">
           <div class="row">
@@ -123,7 +115,7 @@
 
 
 
-        <div class="SearchResults">
+        <!--div class="SearchResults">
           <ul ng-repeat="stop in $ctrl.stops">
 
             <div class="row">
@@ -143,7 +135,7 @@
                 </div>
             </div>
           </ul>
-        </div>
+        </div-->
 
 
 
@@ -175,7 +167,7 @@
 
 
     vm.departlandmarkSelect = function() {
-      console.log("vm.area = " + vm.area);
+      //console.log("vm.area = " + vm.area);
       let lat = '';
       let long = '';
 
@@ -213,9 +205,9 @@
 
       //console.log('about to call lat and long route');
       //get the lat/longs for the nearby markers
-      //using a new route
       $http.get('/api/stops/${lat}/${long}').then(function(response) {
         console.log('calling lat and long route');
+
         // vm.stops = response.data;
         // vm.showComments = false;
         //console.log(vm.stops);

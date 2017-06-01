@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var map = null;
+
   //register the service object ('notify').  This will need to be injected in all
   //parts of the app that will reference the map
   angular.module('myApp')
@@ -36,9 +38,9 @@
           lng: parseFloat(longitude)
         };
 
-        console.log('In initMap, startLocation = ' + JSON.stringify(startLocation));
+        //console.log('In initMap, startLocation = ' + JSON.stringify(startLocation));
 
-        var map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: startLocation
         });
@@ -49,33 +51,68 @@
 
         });
 
-        addNearbyMarkers(map, latitude, longitude);
+
+
+
+        //Commented out to add markers with google maps
+        //addNearbyMarkers(map, latitude, longitude);
+
+
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: startLocation,
+          radius: 50000,
+          keyword: 'bus_station'
+        }, mapBusStops);
+
       } //End initMap
 
 
 
+      function mapBusStops(places) {
+        //console.log('Places = ' + JSON.stringify(places));
 
+        //console.log("map = " + map);
+
+        //var bounds = new google.maps.LatLngBounds();
+
+        for (let i = 0, place; place = places[i]; i++) {
+
+
+          // var image = {
+          //   url: place.icon,
+          //   size: new google.maps.Size(71, 71),
+          //   origin: new google.maps.Point(0, 0),
+          //   anchor: new google.maps.Point(17, 34),
+          //   scaledSize: new google.maps.Size(25, 25)
+          // };
+          //var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+          var image = '../images/busstop.png';
+
+          console.log(place);
+          //console.log(place.geometry.location);
+
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            //animation: google.maps.Animation.DROP,
+            position: place.geometry.location
+          });
+
+
+        }
+        //map.fitBounds(bounds);
+
+      } //End processResults
+
+
+
+      //Get marker points based on lat/long values in the database
       function addNearbyMarkers(map, lat, long) {
 
-        console.log("inside addNearbyMarkers with lat " + lat);
-        console.log("inside addNearbyMarkers with long " + long);
-
-        // var latlng = new google.maps.LatLng(lat, long);
-        //
-        // console.log("inside addNearbyMarkers with latLong" + latlng);
-        //
-        // var marker = new google.maps.Marker({
-        //   position: latlng,
-        //   title: 'new marker',
-        //   draggable: true,
-        //   map: map
-        // });
-
-
-        //Get $http undefined
-        // $http.get('/api/stops/search' + '/' + lat).then(function(response) {
-        //   console.log(response);
-        // })
+        // console.log("inside addNearbyMarkers with rounded lat " + latFloat.toFixed(3));
+        // console.log("inside addNearbyMarkers with rounded lat " + longFloat.toFixed(3));
 
         $http({
           url: '/api/stops/search',
@@ -101,7 +138,7 @@
       //Load the map and bus stops based on a keyword
       this.loadkeyWordMap = function(keyword, lat, long) {
 
-        console.log("In loadkeyWordMap and lat = " + lat + " and long = " + long);
+        //console.log("In loadkeyWordMap and lat = " + lat + " and long = " + long);
 
         initMap(lat, long, keyword);
         addNearbyMarkers(map, parseFloat(lat), parseFloat(long))
