@@ -2,7 +2,6 @@
   'use strict';
 
   var map = null;
-  var destinationMap = null;
 
   //register the service object ('notify').  This will need to be injected in all
   //parts of the app that will reference the map
@@ -28,16 +27,13 @@
       initMap('30.2655566', '-97.7518872', 'Galvanize')
 
       function initMap(latitude, longitude, initial) {
-
-        console.log("In initMap");
-
         if (initial.length === 0) {
           var labels = ['You Are Here'];
         } else {
           var labels = ['Start at ' + initial];
         }
 
-        let startLocation = {
+        var startLocation = {
           lat: parseFloat(latitude),
           lng: parseFloat(longitude)
         };
@@ -55,13 +51,17 @@
 
         });
 
+
+
+
         //Commented out to add markers with google maps
         //addNearbyMarkers(map, latitude, longitude);
+
 
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
           location: startLocation,
-          radius: 50000,
+          radius: 250,
           keyword: 'bus_station'
         }, mapBusStops);
 
@@ -69,14 +69,13 @@
 
 
 
-
-
       function mapBusStops(places) {
-
-        console.log("in mapBusStops");
 
         for (let i = 0, place; place = places[i]; i++) {
           var image = '../images/busstop.png';
+
+          //console.log(place);
+          //console.log(place.geometry.location);
 
           var marker = new google.maps.Marker({
             map: map,
@@ -86,13 +85,16 @@
             position: place.geometry.location
           });
         }
-      } //End mapBusStops
+        //map.fitBounds(bounds);
+      } //End processResults
 
 
 
       //Get marker points based on lat/long values in the database
       function addNearbyMarkers(map, lat, long) {
-        console.log("in addNearbyMarkers");
+
+        // console.log("inside addNearbyMarkers with rounded lat " + latFloat.toFixed(3));
+        // console.log("inside addNearbyMarkers with rounded lat " + longFloat.toFixed(3));
 
         $http({
           url: '/api/stops/search',
@@ -104,20 +106,22 @@
         }).then(function(response) {
           console.log(response);
         })
+
+        //Can't see the stops object
+        //console.log("inside addNearbyMarkers " + this.stops);
+
       }
 
+      //Can add more methods as well
+      // this.anotherMethod = function(){}
+      //Load the map and bus stops based on a keyword
       this.loadkeyWordMap = function(keyword, lat, long) {
+
+        //console.log("In loadkeyWordMap and lat = " + lat + " and long = " + long);
+
         initMap(lat, long, keyword);
         addNearbyMarkers(map, parseFloat(lat), parseFloat(long))
       }
-
-
-
-
-
-
-
-
 
     };
   }

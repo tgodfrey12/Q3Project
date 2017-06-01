@@ -80,7 +80,22 @@
                     </ul>
 
 
-
+                <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Arrival Time<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">12:00</a></li>
+                        <li><a href="#">1:00</a></li>
+                        <li><a href="#">2:00</a></li>
+                        <li><a href="#">3:00</a></li>
+                        <li><a href="#">4:00</a></li>
+                        <li><a href="#">5:00</a></li>
+                        <li><a href="#">6:00</a></li>
+                        <li><a href="#">7:00</a></li>
+                        <li><a href="#">8:00</a></li>
+                        <li><a href="#">9:00</a></li>
+                        <li><a href="#">10:00</a></li>
+                        <li><a href="#">11:00</a></li>
+                    </ul>
+                </div>
 
                 <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">AM/PM<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -121,44 +136,6 @@
         </div-->
 
 
-        <li class="dropdown" ng-init="$ctrl.area='West Downtown'; sortName='Votes'">
-           <a href="#"
-             class="dropdown-toggle"
-             data-toggle="dropdown"
-             role="button"
-             aria-haspopup="true"
-             aria-expanded="false">Select a destination<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a ng-click="$ctrl.area='West Downtown'; $ctrl.departlandmarkSelect();">West Downtown</a></li>
-             <li><a ng-click="$ctrl.area='Westgate'; $ctrl.departlandmarkSelect();">Westgate</a></li>
-             <li><a ng-click="$ctrl.area='The Domain'; $ctrl.departlandmarkSelect();">The Domain</a></li>
-             <li><a ng-click="$ctrl.area='South Congress'; $ctrl.departlandmarkSelect();">South Congress</a></li>
-           </ul>
-         </li>
-
-         <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Arrival Time<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-                 <li><a href="#">12:00</a></li>
-                 <li><a href="#">1:00</a></li>
-                 <li><a href="#">2:00</a></li>
-                 <li><a href="#">3:00</a></li>
-                 <li><a href="#">4:00</a></li>
-                 <li><a href="#">5:00</a></li>
-                 <li><a href="#">6:00</a></li>
-                 <li><a href="#">7:00</a></li>
-                 <li><a href="#">8:00</a></li>
-                 <li><a href="#">9:00</a></li>
-                 <li><a href="#">10:00</a></li>
-                 <li><a href="#">11:00</a></li>
-             </ul>
-         </div>
-
-         <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">AM/PM<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-                 <li><a href="#">AM</a></li>
-                 <li><a href="#">PM</a></li>
-             </ul>
-         </div>
 
   `
     })
@@ -182,6 +159,10 @@
         //console.log(vm.stops);
       })
     }
+
+
+
+
 
     vm.departlandmarkSelect = function() {
       //console.log("vm.area = " + vm.area);
@@ -219,6 +200,8 @@
           break;
       }
 
+
+      //console.log('about to call lat and long route');
       //get the lat/longs for the nearby markers
       $http.get('/api/stops/${lat}/${long}').then(function(response) {
         console.log('calling lat and long route');
@@ -228,10 +211,18 @@
         //console.log(vm.stops);
       })
 
+
+
       notify.loadkeyWordMap(vm.area, lat, long);
 
       //console.log("lat = " + notify.lat);
+
     }
+
+
+
+
+
 
 
     //Call methods from within the notify service in mapModule.js

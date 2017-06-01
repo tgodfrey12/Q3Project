@@ -1,0 +1,39 @@
+
+.searchBox{
+  background-color: red;
+  width: 25%;
+  float: left;
+}
+
+
+.header{
+  height: 100px;
+  background-color: yellow;
+}
+.fromSearchOptions{
+  width: 50%;
+  background-color: red;
+}
+
+.fromDropDown{
+  background-color: blue;
+  height: 500px;
+}
+
+/*.searchArea{
+  width: 37%;
+  height: 100px;
+  background-color: red;
+}*/
+
+/*.footer{
+  background-color: pink;
+  height: 100px;
+}*/
+
+.map{
+  display: flex;
+  height: 250px;
+  width: 100%;
+  float: right;
+}
