@@ -136,6 +136,27 @@
            </ul>
          </li>
 
+
+
+
+
+         <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Arrival Time<span class="caret"></span></a>
+             <ul class="dropdown-menu">
+             <li><a ng-click="$ctrl.arriveArea='West Downtown'; $ctrl.arrivelandmarkSelect();">West Downtown</a></li>
+             <li><a ng-click="$ctrl.arriveArea='Westgate'; $ctrl.arrivelandmarkSelect();">Westgate</a></li>
+             <li><a ng-click="$ctrl.arriveArea='The Domain'; $ctrl.arrivelandmarkSelect();">The Domain</a></li>
+             <li><a ng-click="$ctrl.ararriveAreaea='South Congress'; $ctrl.arrivelandmarkSelect();">South Congress</a></li>
+             </ul>
+         </div>
+
+
+
+
+
+
+
+
+
          <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#" id="btnCountry">Arrival Time<span class="caret"></span></a>
              <ul class="dropdown-menu">
                  <li><a href="#">12:00</a></li>
@@ -169,11 +190,8 @@
     //console.log('this is the controller for the rideSearch component');
     const vm = this;
 
-
-
     vm.$onInit = function() {
       //console.log("api stops loading...");
-
 
       //Get all the stops
       $http.get('/api/stops/').then(function(response) {
@@ -181,6 +199,43 @@
         vm.showComments = false;
         //console.log(vm.stops);
       })
+    }
+
+    vm.arrivelandmarkSelect = function() {
+      console.log("Inside arrivelandmarkSelect");
+      // let lat = '';
+      // let long = '';
+      //
+      //
+      // switch (vm.arriveArea) {
+      //   case 'West Downtown':
+      //     //Statements executed when the result of expression matches value2
+      //     lat = '30.2718634';
+      //     long = '-97.7564902';
+      //     break;
+      //   case 'Westgate':
+      //     lat = '30.2249088';
+      //     long = '-97.8065877';
+      //
+      //     break;
+      //   case 'The Domain':
+      //     lat = '30.4020649';
+      //     long = '-97.7280716';
+      //     break;
+      //   case 'Hutto':
+      //     lat = '30.5391729';
+      //     long = '-97.584807';
+      //
+      //     break;
+      //   case 'South Congress':
+      //     lat = '30.249222';
+      //     long = '-97.7517067';
+      //     break;
+      //   default:
+      //     lat = '30.2746652';
+      //     long = '-97.7425392';
+      //     break;
+      // }
     }
 
     vm.departlandmarkSelect = function() {

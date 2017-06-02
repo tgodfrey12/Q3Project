@@ -48,7 +48,7 @@
           zoom: 15,
           center: startLocation
         });
-        var marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
           position: startLocation,
           label: labels[0],
           map: map,
@@ -68,25 +68,46 @@
       } //End initMap
 
 
-
-
-
       function mapBusStops(places) {
 
         console.log("in mapBusStops");
+        let markers = [];
 
         for (let i = 0, place; place = places[i]; i++) {
           var image = '../images/busstop.png';
 
-          var marker = new google.maps.Marker({
+          //console.log(place);
+
+          let stopMarker = new google.maps.Marker({
             map: map,
             icon: image,
             title: place.name,
             //animation: google.maps.Animation.DROP,
             position: place.geometry.location
           });
+
+          let infowindow = new google.maps.InfoWindow({
+            content: place.name
+          });
+
+
+          markers.push(stopMarker);
+
+
+
         }
+
+        markers.forEach(function(marker) {
+          google.maps.event.addListener(marker, 'click', function() {
+            console.log("In click event");
+            map.setCenter(marker.getPosition());
+            infowindow.open(map, marker);
+          });
+
+        })
+
       } //End mapBusStops
+
 
 
 
@@ -110,15 +131,6 @@
         initMap(lat, long, keyword);
         addNearbyMarkers(map, parseFloat(lat), parseFloat(long))
       }
-
-
-
-
-
-
-
-
-
     };
   }
 }())
